@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#statsWrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.statLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #e8f0fe;
+    border: 1px solid #a0b4d8;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+.statValue {
+    background-color: #f5941f;
+    color: white;
+    border-radius: 10px;
+    padding: 3px 15px;
+}
+
+#achievementBadge {
+    position: absolute;
+    top: 195px;
+    left: 20px;
+    background-color: #8a5cf6;
+    color: #6be0f0;
+    border: 3px solid black;
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+#deuxboutons {
+    position: absolute;
+    top: 340px;
+    left: 20px;
+}
+
+#deuxieme.on {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #4caf27;
+    border: 3px solid black;
+}
+
+#deuxieme.off {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #4caf27;
+    border: 3px solid black;
+}
+
+#IMGrandom {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+#scroePerClickDiv {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5941f;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainButtonWrapper {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#boutonprincipal {
+    background-color: #6b6b6b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+#fieldsetWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ameliorationTitle {
+    font-size: 32px;
+    color: #14a085;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+#fieldsetRunner {
+    border: 5px solid black;
+    width: 700px;
+    max-width: 90%;
+    height: 150px;
+}
+
+#scroePerClick {
+    margin: 0;
+}
