@@ -4,6 +4,8 @@ const mainButtonWrapper = document.getElementById('mainButtonWrapper');
 const nombredeclic = document.getElementById('nombredeclic');
 const deuxieme = document.getElementById('deuxieme');
 const upPoule = document.getElementById('upPoule');
+const Achievement100Click = document.getElementById('Achievement100Click');
+let onetime = 0;
 
 if (ScorePerClick.textContent === "") {
     ScorePerClick.textContent = 0;
@@ -25,7 +27,18 @@ function spawnPlusOne() {
     });
 }
 
+let lastClickTime = 0;
+
 mainButtonWrapper.addEventListener('click', function(){
+    const now = Date.now();
+    const interval = now - lastClickTime;
+    lastClickTime = now;
+
+    if (interval < 50) {
+        alert("autoclick are not allowed");
+        return;
+    }
+
     let HisValue = ScorePerClick.textContent;
     ScorePerClick.textContent = Number(HisValue) + Number(ScorePerClickGauche.textContent);
     nombredeclic.textContent = Number(nombredeclic.textContent) + 1;
@@ -53,6 +66,23 @@ deuxieme.addEventListener('click', function() {
 const verif = function() {
     if (Number(nombredeclic.textContent) == 25) {
         upPoule.style.display = "flex"
+    }
+    if (Number(nombredeclic.textContent) >= 100) {
+        if (onetime == 1) {
+            return;
+        }
+        Achievement100Click.style.display = "flex";
+        Achievement100Click.style.animation = "dropFromRight 0.8s ease forwards";
+
+        setTimeout(function() {
+            Achievement100Click.style.animation = "RedropLeft 0.8s ease forwards";
+
+            setTimeout(function() {
+                Achievement100Click.style.display = "none";
+            }, 800);
+        }, 2000);
+
+        onetime = 1;
     }
 }
 

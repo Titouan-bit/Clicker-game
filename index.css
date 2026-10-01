@@ -157,6 +157,7 @@ html, body {
 }
 
 #upPoule {
+    cursor: pointer;
     display: none;
     position: absolute;
     top: 25px;
@@ -196,5 +197,78 @@ html, body {
     to {
         transform: translate(-50%, calc(-50% - 250px));
         opacity: 0;
+    }
+}
+
+.Achievement {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+    flex-wrap: wrap;
+    width: 340px;
+    border: 5px solid black;
+    background-color: #80ffff;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.Achievement p:first-of-type {
+    order: 1;
+    width: 100%;
+    margin: 0;
+    padding: 12px 10px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    border-bottom: 5px solid black;
+    box-sizing: border-box;
+}
+
+.Achievement img {
+    order: 2;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background-color: #999999;
+    border: 4px solid black;
+    margin: 12px;
+    box-sizing: border-box;
+}
+
+.Achievement p:last-of-type {
+    order: 3;
+    flex: 1;
+    margin: 12px 12px 12px 0;
+    padding: 0;
+    color: red;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes dropFromRight {
+    from {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes RedropLeft {
+    from {
+        transform: translateX(0%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(120%);
+        opacity: 1;
     }
 }
