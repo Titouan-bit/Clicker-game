@@ -49,11 +49,6 @@ html, body {
 
 #deuxboutons {
     position: absolute;
-    top: 340px;
-    left: 20px;
-}
-
-#deuxieme.on {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +56,21 @@ html, body {
     height: 100px;
     background-color: #4caf27;
     border: 3px solid black;
+    top: 340px;
+    left: 20px;
+}
+
+#deuxieme {
+    background-color: #4caf27;
+    border: none;
+}
+#deuxieme.on {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #4caf27;
 }
 
 #deuxieme.off {
@@ -70,7 +80,6 @@ html, body {
     width: 100px;
     height: 100px;
     background-color: #4caf27;
-    border: 3px solid black;
 }
 
 #IMGrandom {
@@ -130,6 +139,7 @@ html, body {
 }
 
 #fieldsetRunner {
+    position: relative;
     border: 5px solid black;
     width: 700px;
     max-width: 90%;
@@ -138,4 +148,53 @@ html, body {
 
 #scroePerClick {
     margin: 0;
+}
+
+.up {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+}
+
+#upPoule {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 30pxpx;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    background-color: grey;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pUP {
+    color: black;
+}
+
+.clicksUp {
+    color: red;
+}
+
+.popPlus {
+    position: absolute;
+    top: 40%;
+    color: rgb(80, 6, 80);
+    font-weight: bold;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, calc(-50% - 250px));
+        opacity: 0;
+    }
 }
